@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Seleccion-gmd</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--enlazando tipografía-->
+    <link href="https://fonts.googleapis.com/css?family=Song+Myung" rel="stylesheet">
+    <!--iconos de materialize-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--íconos fontawesone-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <!--enlazando css de materialize-->
+    <link rel="stylesheet" href="../vendors/materialize/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css"/>
+</head>
+<body >
+ 
+    <nav class="white">
+        <div class="nav-wrapper">
+            <a href="../index.html" class="brand-logo"><img src="../assets/img/logo5.PNG" alt="logo" class=""></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="mobile.html" class=" indigo-text text-darken-4">Plataforma de talento humano</a></li>
+            </ul>
+        </div>
+    </nav>
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="mobile.html" class=" indigo-text text-darken-4">Plataforma de talento humano</a></li>
+    </ul>
+    <section class=" " id="form">
+        <div class="row background ">
+            <div class="col s6 offset-s6 m4 offset-m8 indigo-text text-darken-4 register">
+                <a class=" btn white  margin-btn indigo-text text-darken-4 modal-trigger" id="registers" href="#register">registrarse</a>
+               <a class=" btn white  margin-btn indigo-text text-darken-4 modal-trigger" id="" href="#dejar">Déjanos tu cv</a>
+                <div id="dejar" class="modal">
+                    <div class="modal-content">
+                        <div class="row">
+                            <div class="col s8 offset-s2">
+                                <div class="file-field input-field">
+                                    <div class="btn indigo darken-4">
+                                        <span>cv</span>
+                                        <input  id="melif" type="file" multiple class="">
+                                    </div>
+                                    <div class="file-path-wrapper">
+                                        <input id="entrada" class="file-path validate" type="text" placeholder="Incorpora tu cv"> 
+                                    </div>
+                                </div>
+                                <button id="save-cv" class=" indigo darken-4 btn waves-effect waves-light " type="submit" >Enviar
+                                </button>
+                                <div class="modal-footer">
+                                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
+                                </div>
+                    </div>
+                
+                </div>
+                </div>
+                </div>
+                <div id="root1">
+
+                </div>
+            </div> 
+        </div>
+       
+        <div class="row">
+            <div class="col s12 col m6 offset-m3">
+                <h5 class="center-align indigo-text text-darken-4">Encuentra tu trabajo ideal y forma parte de nuestra gran familia</h5>
+                <input placeholder="Estas a un paso de empezar una gran aventura..busca y encontrarás" id="search" type="text" class="search">
+            </div> 
+        </div>
+        <div class="row">
+            <div class="col s12 col m6 offset-m3">
+                <ul class="collapsible container-js post" id="list">
+                </ul>
+           
+            </div>
+            <div class=" container-post"></div>
+            
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+    <!--<script src="../vendors/js/jquery-3.2.1.min.js"></script>-->
+    <!--enlazando la librería de materialize-->
+    <script src="../vendors/materialize/js/materialize.min.js"></script>
+    <!--data de los trabajos-->
+    <script type="text/javascript" src="../js/data.js"></script>
+    <!--incialización de materialize-->
+    <script type="text/javascript" src="../js/init.js"></script>
+    
+    <!--enlazando búsqueda de trabajo-->
+    <script type="text/javascript" src="../js/works.js"></script>
+    <script type="text/javascript" src="../js/profile.js"></script>
+    <!--enlazando profile-->
+    
+   
+   <!--<script type="text/javascript" src="../js/works.js"></script>-->
+</body>
+</html>

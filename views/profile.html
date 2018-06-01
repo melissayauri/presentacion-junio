@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Seleccion-gmd</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--enlazando tipografía-->
+    <link href="https://fonts.googleapis.com/css?family=Song+Myung" rel="stylesheet">
+    <!--iconos-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--enlazando css de materialize-->
+    <link rel="stylesheet" href="../vendors/materialize/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css"/>
+</head>
+<body>
+  <!--navbar-->
+  <nav class="white">
+    <div class="nav-wrapper">
+      <a href="../index.html" class="brand-logo"><img src="../assets/img/logo5.PNG" alt="logo" class=""></a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="mobile.html" class=" indigo-text text-darken-4">Plataforma de talento humano</a></li>
+      </ul>
+    </div>
+  </nav>
+  <ul class="sidenav" id="mobile-demo">
+      <li><a href="mobile.html" class=" indigo-text text-darken-4">Plataforma de talento humano</a></li>
+  </ul>
+  <section>
+    <div class="row background">
+      <div class="col s7   valign-wrapper">
+        <h6 class="white-text mg-top">"Este mundo no es sino un lienzo para nuestra imaginacion"</h6>
+      </div>
+      <div class="col s4 offset-s1  m2 offset-m2"  id="root">
+        
+      </div>
+      <div class="col s4 offset-s8  m2 offset-m9"  id="box-btn">
+        
+        </div>
+    </div>
+  </section>
+ 
+  <!--bienvenida-->
+  <section>
+    <div class="container">
+      <div class="row ">
+        <div class="col s3 m4">
+          <span class="indigo darken-4 white-text padding">Fase 1</span>
+        </div>
+        <div class="col s9 m8">
+          <span class="center-align mg phrase">Queremos empezar a conocerte un poco más, detalla tu cv</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--formularios-->
+  <section class="">
+    <div class="container ">
+      <div class="row ">
+          <div id="contacto" class="col s12 ">
+            <div class="row line">
+              <div class="col s5 m4 indigo darken-4 white-text">
+                <div id="profile">
+
+                </div>
+                <div class="row">
+                  <div id="img-profile" class="col s12 m8 offset-m2">
+
+                  </div>
+                </div>
+                <div class=" row ">
+                  <div class=" col s12">
+                    <label for="dni" class="white-text">DNI</label>
+                    <input  name="dni" id="dni" type="number" class="validate">
+                  </div>
+                  <div class=" col s12 ">
+                    <label for="celular" class="white-text">Celular</label>
+                    <input type="tel" id="celular" name="celular" />
+                  </div>
+                  <div class=" col s12">
+                      <label for="nacimiento" class="white-text">Fecha de nacimiento</label>
+                      <input  name="nacimiento" id="nacimiento" type="date" class="validate" placeholder="dd/mm/aaaa">
+                    </div>
+                </div>
+              </div>
+         
+              <div class="col s7 pd">
+                <img src="../assets/img/back.PNG" alt="back" class="">
+                <div class="col s12 bordes">
+                  <p class="indigo-text text-darken-4">Estudios</p>
+                </div>
+                <div class="row">
+                  <div class="col s12">
+                    <ul class="tabs">
+                      <li class="tab col s6"><a class="active" href="#test1">Universitario</a></li>
+                      <li class="tab col s6"><a  href="#test2">Técnico</a></li>
+                    </ul>
+                  </div>
+                  <!--estudios universitarios-->
+                  <div id="test1" class="col s12">  
+                    <div class="col s12 m6">
+                      <label for="univ" class="indigo-text text-darken-4">Universidad</label>
+                      <input  id="univ" type="text" >
+                    </div>
+                    <div class=" col s12 m6 ">
+                      <label for="career" class="indigo-text text-darken-4">Carrera</label>
+                      <input type="text" id="career" />
+                    </div>
+                    <div class=" col s12 m6">
+                        <label for="inicio" class="indigo-text text-darken-4">Fecha de inicio</label>
+                        <input type="text" class="datepicker" id="inicio">
+                      </div>
+                      <div class=" col s12 m6">
+                        <label for="final" class="indigo-text text-darken-4">Fecha final</label>
+                        <input id="final" type="text" class="datepicker">
+                      </div>
+                    <div class=" col s12 ">
+                        <p class="mg-top mg-bt">
+                          <label>
+                            <input type="checkbox" name="compe"/>
+                            <span class="indigo-text text-darken-4">Actualmente</span>
+                          </label>
+                        </p>
+                      </div>
+                    <div class=" input-field col s12 m6 ">
+                        <select  id= "grado">
+                          <option value="" disabled selected>Elige</option>
+                          <option value="Estudiante">Estudiante</option>
+                          <option value="Bachiller">Bachiller</option>
+                          <option value="3">Universitario titulado</option>
+                        </select>
+                        <label class="indigo-text text-darken-4">Grado</label>
+                    </div>
+                   </div>
+                   <!--estudios tecnicos-->
+                  <div id="test2" class="col s12 ">
+                  <div class="col s12 m6">
+                      <label for="instituto" class="indigo-text text-darken-4">Instituto</label>
+                      <input  id="instituto" type="text" >
+                    </div>
+                    <div class=" col s12 m6 ">
+                      <label for="career-tec" class="indigo-text text-darken-4">Carrera</label>
+                      <input type="text" id="career-tec" />
+                    </div>
+                    <div class=" col s12 m6">
+                        <label for="inicio" class="indigo-text text-darken-4">Fecha de inicio</label>
+                        <input type="text" class="datepicker" id="inicio">
+                      </div>
+                      <div class=" col s12 m6">
+                        <label for="final" class="indigo-text text-darken-4">Fecha final</label>
+                        <input id="final" type="text" class="datepicker">
+                      </div>
+                    <div class=" col s12 ">
+                        <p class="mg-top mg-bt">
+                          <label>
+                            <input id="state-study" type="checkbox" name="competencia" value="actualmente"/>
+                            <span class="indigo-text text-darken-4">Actualmente</span>
+                          </label>
+                        </p>
+                      </div>
+                    <div class=" input-field col s12 m6 ">
+                        <select  id= "grado-tec">
+                          <option value="" disabled selected>Elige</option>
+                          <option value="Estudiante">Técnico titulado</option>
+                          <option value="Bachiller">Técnico sin título</option>
+                        </select>
+                        <label class="indigo-text text-darken-4">Grado</label>
+                    </div>
+                  </div>
+                  
+                </div>
+                      
+                <!--otras capacitaciones-->
+                <div class="col s12 bordes">
+                  <p class="indigo-text text-darken-4">Otras capacitaciones</p>
+                </div>
+                <div class="col s12 m6 ">
+                  <label for="first_name" class="indigo-text text-darken-4">Insitución</label>
+                  <input  name="dni" id="first_name" type="text" class="validate">
+                </div>
+                <div class="col s12 m6">
+                  <label for="first_name" class="indigo-text text-darken-4">Capacitación</label>
+                  <input type="text" id="nombre" name="c" />
+                </div>
+                <div class="col s12 m6">
+                  <label for="inicio" class="indigo-text text-darken-4">Fecha de inicio</label>
+                  <input type="text" class="datepicker" id="inicio">
+                </div>
+                <div class="col s12 m6">
+                  <label for="inicio" class="indigo-text text-darken-4">Fecha final</label>
+                  <input type="text" class="datepicker" id="inicio">
+                </div>
+                
+                <!--experiencia-->
+                <div class="col s12 bordes">
+                  <p class="indigo-text text-darken-4">Experiencia</p>
+                </div>
+                <div class="col s12 ">
+                  <label for="company" class="indigo-text text-darken-4">Empresa</label>
+                  <input  name="empresa" id="company" type="text" class="validate">
+                </div>
+                <div class=" col s12 m6">
+                  <label for="start" class="indigo-text text-darken-4">Fecha de inicio</label>
+                  <input type="text" class="datepicker" id="start">
+                </div>
+                <div class=" col s12 m6">
+                  <label for="end" class="indigo-text text-darken-4">Fecha final</label>
+                  <input id="end" type="text" class="datepicker">
+                </div>
+                <div class=" col s12 m4">
+                <p class="mg-top mg-bt">
+                  <label>
+                    <input type="checkbox" name="competencia"/>
+                    <span class="indigo-text text-darken-4">Actualmente</span>
+                  </label>
+                </p>
+              </div>
+              <div class="col s12 ">
+                <label for="cargo" class="indigo-text text-darken-4">Cargo</label>
+                <input  name="empresa" id="cargo" type="text" class="validate">
+              </div>
+                <div class=" col s12 ">
+                  <label for="resum" class="indigo-text text-darken-4">Resumen</label>
+                  <textarea id="resum" class="materialize-textarea"></textarea>
+                </div>
+            
+                <!--habilidades-->
+                <div class="col s12 bordes">
+                  <p class="indigo-text text-darken-4 ">Habilidades</p>
+                </div>
+                <div class="col s12 m6 ">
+                  <p>
+                    <label>
+                      <input id="work" type="checkbox" name="competencia" value="Trabajo en equipo"/>
+                      <span class="indigo-text text-darken-4">Trabajo en equipo</span>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input id="resilencia" type="checkbox" name="competencia" value="Resilencia" />
+                      <span class="indigo-text text-darken-4">Resilencia</span>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input type="checkbox" name="competencia"/>
+                      <span class="indigo-text text-darken-4">Organización</span>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input type="checkbox" name="competencia" />
+                      <span class="indigo-text text-darken-4">Creatividad e innovación</span>
+                    </label>
+                  </p>
+                </div>
+                <div class="col s12 m6 bordes">
+                  <p>
+                    <label>
+                      <input type="checkbox" name="competencia"/>
+                      <span class="indigo-text text-darken-4">Capacidad de análisis de datos</span>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input type="checkbox" name="competencia" />
+                      <span class="indigo-text text-darken-4">Habilidad para tomar decisiones</span>
+                    </label>
+                  </p>
+                  <p>
+                   
+                    <label>
+                      <input type="checkbox" name="competencia" />
+                      <span class="indigo-text text-darken-4">Orientación al cliente</span>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input type="checkbox" name="competencia"/>
+                      <span class="indigo-text text-darken-4">Comunicación efectiva</span>
+                    </label>
+                  </p>
+                </div>
+                <div class="file-field input-field col s10 ">
+                    <div class="btn indigo darken-4 ">
+                        <!--<i class="material-icons">attach_file</i>-->
+                        <span>Subir cv</span>
+                      <input id="melif" type="file">
+                    </div>
+                    <div class="file-path-wrapper">
+                      <input class="file-path validate" type="text" placeholder="solo pdf">
+                    </div>
+                    <div id="mensaje"></div>
+                  </div> 
+                </div>
+              </div>
+              <!--file-->
+              <div class="row">
+              <div class="col s6 offset-s3 m6 offset-m5" id="save">
+                <button data-target="modal4" id="enviar" class="btn waves-effect waves-light indigo darken-4 modal-trigger" disabled >Enviar registro
+                 
+                  
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+         
+  <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+    <script src="../vendors/js/jquery-3.2.1.min.js"></script>
+    
+    <script src="../vendors/materialize/js/materialize.min.js"></script>
+    <script type="text/javascript" src="../js/perfil.js"></script>
+
+    
+</body>
+</html>
