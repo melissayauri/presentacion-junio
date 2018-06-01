@@ -400,7 +400,7 @@ function mensajeFinalizado(url, bytes) {
       $('#env').on('click', surprise);
       $('#env').on('click', recorrerDiasSemana);
       function recorrerDiasSemana(){
-        alert('dd')
+        //alert('dd')
         var listaDias = new Array();
         $("input[name=question1],input[name=question2],input[name=question3").each(function (index) { 
            if($(this).is(':checked')){
