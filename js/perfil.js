@@ -110,12 +110,12 @@ var config = {
       function checkForm (idForm) {
         //let $letter = $('#univ, #city');
         $(idForm + " *").on(" change  keyup", function() {
-          if ( /*checkInput("#dni", dniNumber)&& checkInput("#celular", phonePattern)
+          if ( checkInput("#dni", dniNumber)&& checkInput("#celular", phonePattern)
           && (checkInput("#univ", namePattern) ||checkInput("#instituto", namePattern))
           &&(checkInput("#career", namePattern) ||checkInput("#career-tec", namePattern))
           &&(checkSelect("#grado",namePattern)||checkSelect("#grado-tec",namePattern))
           && checkInput("#company", namePattern)&& checkInput("#cargo", namePattern)&& checkInput("#resum", namePattern)
-          &&*/checkRadioBox("[name=competencia]")/*&& checkInput("#melif", filePattern)
+          && checkRadioBox("[name=competencia]")&& checkInput("#melif", filePattern)
           /*checkInput("#celular", phone)&& checkInput("#univ", namePattern)&& 
           checkInput("#dni", dniNumber)&& checkInput("#celular", phonePattern) && 
           (checkInput("#univ", namePattern) ||checkInput("#instituto", namePattern))
@@ -175,19 +175,32 @@ function subirArchivo(archivo) {
 }
 function mensajeFinalizado(url, bytes) {
  var elMensaje = $('#mensaje');
- var textoMensaje = `<p>Subido el archivo!</p>`
+ var textoMensaje = `<p>Hay un archivo</p>`
 /*textoMensaje += '<br>Bytes subidos: ' + bytes;
  textoMensaje += '<br><a href="' + url + '">Ver el fichero</a>'*/
  elMensaje.append(textoMensaje);
 }
+/*$("input[name=compentencia]").on('input', function(){
 
-
+  alert('gdgd')
+   var habilidades = new Array();
+   $("input[name=compentencia]").each(function (index) { 
+      if($(this).is(':checked')){
+       habilidades.push($(this).val());
+       console.log(habilidades)
+      }
+     })
+   })
+*/
      var $UID = window.localStorage.getItem('storageUID');
      console.log($UID );
       /*enviando el formulario a firebase */
       $('#enviar').on('click', function(event) {
-       
+        
         event.preventDefault();
+       let compt1 = $("#work:checked").val()
+       let compt2 = $("#resilencia:checkbox:checked").val()
+        
         //firebase.database().ref('formulario/' + $UID).update
         firebase.database().ref('formul/' + usuario).update(
           objectFormul = {
@@ -195,19 +208,31 @@ function mensajeFinalizado(url, bytes) {
             dni: $('#dni').val(),
             celular: $('#celular').val(),
             nacimiento:$('#nacimiento').val(),
+            /*estudios en la universidad */
             universidad: $('#univ').val(),
             carrera: $('#career').val(),
             grado: $('#grado').val(),
             inicioEstudios:  $('#inicio').val(),
             finalEstudios: $('#final').val(),
             stateStudy: $('#state-study').val(),
+            /*Estudios técnicos */
+            instituto:$('#instituto').val(),
+            carreraTec:$('#career-tec').val(),
+            inicioTec:$('#inicio-tec').val(),
+            finalTec:$('#final-tec').val(),
+            gradoTec:$('#grado-tec').val(),
+            
+            
+
+            /*Experiencia */
             empresa: $('#company').val(),
             inicioEmpresa: $('#start').val(),
             finalEmpresa: $('#end').val(),
             cargo: $('#cargo').val(),
             resum:$('#resum').val(),
-            competencia1: $( "#work" ).val(), 
-            competencia2: $( "#resilencia" ).val(), 
+           competencia1: compt1, 
+           /* competencia2: compt2 /* 
+            competencia3: $( "#organz:checked" ).val(), */
           }
         )
         /*.catch(function (err) {
